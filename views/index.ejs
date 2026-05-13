@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Favorite Food Types App</title>
+
+    <link rel="stylesheet" href="/style.css">
+  </head>
+
+  <body>
+    <h1>Favorite Types of Food</h1>
+
+    <form action="/foods" method="POST">
+      <input type="text" placeholder="name" name="name" />
+      <input type="text" placeholder="food" name="food" />
+      <button type="submit">Submit</button>
+
+      <h2>Foods</h2>
+
+        <ul class="foods">
+        <!-- Loop through foods -->
+        <% for(var i = 0; i < foods.length; i++) {%>
+        <li class="food">
+            <!-- Output name from the iterated quote object -->
+            <span><%= foods[i].name %></span>:
+            <!-- Output quote from the iterated quote object -->
+            <span><%= foods[i].food %></span>
+        </li>
+        <% } %>
+
+        </ul>
+    </form>
+
+    <div>
+        <h2>Pizza is always the best</h2>
+        <p>Replace Pasta with Pizza</p>
+        <button id="update-button">PIZZA is the BEST!</button>
+    </div>
+
+    <div>
+      <h2>Delete Pizza</h2>
+      <p>
+        Delete one Pizza from the food list. Does nothing if there are no more Pizza on the list
+      </p>
+      <button id="delete-button">Delete Pizza :/</button>
+    </div>
+
+    <div id="message"></div>
+
+    <script src="/main.js"></script>
+    
+  </body>
+</html>

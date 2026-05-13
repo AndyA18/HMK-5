@@ -1,0 +1,14 @@
+body{
+    text-align: center;
+    background-color: beige;
+}
+
+.foods {
+    list-style-position: inside;
+    padding: 0;
+    margin: 0;
+}
+
+.food {
+    margin: 10px 0;
+}
